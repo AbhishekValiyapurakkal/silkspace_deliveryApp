@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
-import 'package:silkspace_delivery/Homepage.dart';
-import 'package:silkspace_delivery/Youpage.dart';
+import 'package:silkspace_delivery/presentation/Homepage.dart';
+import 'package:silkspace_delivery/presentation/Youpage.dart';
 
 class btmnav extends StatefulWidget {
   const btmnav({super.key});

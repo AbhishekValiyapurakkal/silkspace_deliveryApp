@@ -4,8 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:silkspace_delivery/Buttons/elvbtn.dart';
-import 'package:silkspace_delivery/Loginpage.dart';
+import 'package:silkspace_delivery/utilities/elvbtn.dart';
+import 'package:silkspace_delivery/presentation/Loginpage.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});

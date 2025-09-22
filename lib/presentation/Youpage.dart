@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:silkspace_delivery/Loginpage.dart';
-import 'package:silkspace_delivery/signuppage.dart';
+import 'package:silkspace_delivery/presentation/Loginpage.dart';
+import 'package:silkspace_delivery/presentation/signuppage.dart';
 
 class Youpage extends StatelessWidget {
   const Youpage({super.key});
