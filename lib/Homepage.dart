@@ -80,7 +80,7 @@ class _HomepageState extends State<Homepage> {
                     return Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Card(
-                        child: Container(
+                        child: SizedBox(
                             height: 350,
                             width: double.infinity,
                             //color: Colors.blue,

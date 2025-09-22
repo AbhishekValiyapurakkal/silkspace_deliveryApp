@@ -33,18 +33,18 @@ class _SignupState extends State<Signup> {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Loginpage(),
+            builder: (context) => const Loginpage(),
           ));
     } catch (e) {
       print(e);
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text("ALERT !"),
+          title: const Text("ALERT !"),
           content: Text(e.toString()),
           actions: [
             TextButton(
-                onPressed: () => Navigator.pop(context), child: Text("OK"))
+                onPressed: () => Navigator.pop(context), child: const Text("OK"))
           ],
         ),
       );
@@ -66,19 +66,19 @@ class _SignupState extends State<Signup> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
-              Container(
+              SizedBox(
                   height: 110,
                   width: 100,
                   //color: Colors.blue,
-                  child: Center(
+                  child: const Center(
                       child: Image(
                     image: AssetImage("lib/images/Designer.png"),
                     fit: BoxFit.fill,
                   ))),
-              Container(
+              SizedBox(
                 height: 80,
                 width: 300,
                 //color: Colors.blue,
@@ -91,13 +91,13 @@ class _SignupState extends State<Signup> {
                             fontWeight: FontWeight.w600,
                             fontSize: 35,
                             shadows: [
-                              Shadow(
+                              const Shadow(
                                   color: Colors.grey,
                                   offset: Offset(0, 2),
                                   blurRadius: 5)
                             ]),
                       ),
-                      Text(
+                      const Text(
                         "Create your account",
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w500),
@@ -115,7 +115,7 @@ class _SignupState extends State<Signup> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)),
                     fillColor: Colors.grey,
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: const Icon(Icons.person),
                     labelText: 'Name',
                   ),
                 ),
@@ -128,7 +128,7 @@ class _SignupState extends State<Signup> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)),
                     fillColor: Colors.grey,
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: const Icon(Icons.person),
                     labelText: 'email',
                   ),
                 ),
@@ -146,7 +146,7 @@ class _SignupState extends State<Signup> {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)),
                           fillColor: Colors.grey,
-                          prefixIcon: Icon(Icons.lock),
+                          prefixIcon: const Icon(Icons.lock),
                           suffixIcon: IconButton(
                               onPressed: () {
                                 setState(() {
@@ -169,7 +169,7 @@ class _SignupState extends State<Signup> {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)),
                           fillColor: Colors.grey,
-                          prefixIcon: Icon(Icons.lock),
+                          prefixIcon: const Icon(Icons.lock),
                           suffixIcon: IconButton(
                               onPressed: () {
                                 setState(() {
@@ -191,7 +191,7 @@ class _SignupState extends State<Signup> {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)),
                           fillColor: Colors.grey,
-                          prefixIcon: Icon(Icons.location_city_rounded),
+                          prefixIcon: const Icon(Icons.location_city_rounded),
                           labelText: 'City',
                         ),
                       ),
@@ -235,11 +235,11 @@ class _SignupState extends State<Signup> {
                   width: 220),
               Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 100,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 40),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 40),
                     child: Text("Already have an account?"),
                   ),
                   TextButton(
@@ -247,10 +247,10 @@ class _SignupState extends State<Signup> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Loginpage(),
+                              builder: (context) => const Loginpage(),
                             ));
                       },
-                      child: Text("Login"))
+                      child: const Text("Login"))
                 ],
               ),
             ],
