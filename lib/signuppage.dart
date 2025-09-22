@@ -199,7 +199,7 @@ class _SignupState extends State<Signup> {
                   ],
                 ),
               ),
-              elvbtn(
+              Elvbtn(
                   txt: "Sign Up",
                   ontap: () {
                     if (email.text.isEmpty) {

@@ -9,32 +9,32 @@ class Homepage extends StatefulWidget {
 }
 
 List status = [
-  Padding(
-    padding: const EdgeInsets.all(8.0),
+  const Padding(
+    padding: EdgeInsets.all(8.0),
     child: Text(
       "Left silk space facility",
       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
     ),
   ),
-  Padding(
-    padding: const EdgeInsets.all(8.0),
+  const Padding(
+    padding: EdgeInsets.all(8.0),
     child: Text(
       "Reached nearest hub",
       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
     ),
   ),
-  Padding(
-    padding: const EdgeInsets.all(8.0),
+  const Padding(
+    padding: EdgeInsets.all(8.0),
     child: Text("Out for delivery",
         style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
   ),
-  Padding(
-    padding: const EdgeInsets.all(8.0),
+  const Padding(
+    padding: EdgeInsets.all(8.0),
     child: Text("Delivered",
         style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
   ),
-  Padding(
-    padding: const EdgeInsets.all(8.0),
+  const Padding(
+    padding: EdgeInsets.all(8.0),
     child: Text("Cancelled",
         style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
   )
@@ -70,7 +70,7 @@ class _HomepageState extends State<Homepage> {
                 print(snapshot.error);
               }
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return LinearProgressIndicator();
+                return const LinearProgressIndicator();
               }
               return ListView.builder(
                   shrinkWrap: true,
@@ -92,7 +92,7 @@ class _HomepageState extends State<Homepage> {
                                     children: [
                                       Text(
                                         "RS.${snap['totalPrice']} ₹",
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontSize: 25,
                                             fontWeight: FontWeight.w600,
                                             color: Colors.green),
@@ -104,7 +104,7 @@ class _HomepageState extends State<Homepage> {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
                                     snap['address'].split("+").join(" "),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600),
                                   ),
@@ -115,7 +115,7 @@ class _HomepageState extends State<Homepage> {
                                       padding: const EdgeInsets.all(8.0),
                                       child: Row(
                                         children: [
-                                          Text(
+                                          const Text(
                                             "Payment:",
                                             style: TextStyle(
                                                 fontSize: 20,
@@ -123,11 +123,11 @@ class _HomepageState extends State<Homepage> {
                                           ),
                                           Text(
                                             snap['payment'],
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                                 fontSize: 20,
                                                 fontWeight: FontWeight.w600),
                                           ),
-                                          Spacer(),
+                                          const Spacer(),
                                           Card(
                                               child: IconButton(
                                                   onPressed: () {
@@ -135,7 +135,7 @@ class _HomepageState extends State<Homepage> {
                                                       context: context,
                                                       builder: (context) =>
                                                           AlertDialog(
-                                                        title: Text(
+                                                        title: const Text(
                                                             'Order delivered?\nclick ok to confirm and delete order'),
                                                         actions: [
                                                           TextButton(
@@ -151,19 +151,19 @@ class _HomepageState extends State<Homepage> {
                                                                     .delete();
                                                               },
                                                               child:
-                                                                  Text("ok")),
+                                                                  const Text("ok")),
                                                           TextButton(
                                                               onPressed: () {
                                                                 Navigator.pop(
                                                                     context);
                                                               },
-                                                              child: Text(
+                                                              child: const Text(
                                                                   "Cancel")),
                                                         ],
                                                       ),
                                                     );
                                                   },
-                                                  icon: Icon(Icons.done)))
+                                                  icon: const Icon(Icons.done)))
                                         ],
                                       ),
                                     ),
@@ -177,17 +177,17 @@ class _HomepageState extends State<Homepage> {
                                                   .doc(snap.id)
                                                   .update({'status': status});
                                             },
-                                            child: Text(
+                                            child: const Text(
                                               "Update order Status",
                                               style: TextStyle(fontSize: 20),
                                             ))
-                                        : SizedBox(),
+                                        : const SizedBox(),
                                     Row(
                                       children: [
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 80,
                                         ),
-                                        Text(":",
+                                        const Text(":",
                                             style: TextStyle(
                                                 fontSize: 20,
                                                 fontWeight: FontWeight.w600)),

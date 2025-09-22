@@ -1,16 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:silkspace_delivery/Homepage.dart';
 import 'package:silkspace_delivery/Loginpage.dart';
 import 'package:silkspace_delivery/btmnav.dart';
 import 'package:silkspace_delivery/firebase_options.dart';
-import 'package:silkspace_delivery/signuppage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: First(),
   ));
@@ -41,13 +39,13 @@ class _FirstState extends State<First> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => Loginpage(),
+                builder: (context) => const Loginpage(),
               ));
         } else {
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => btmnav(),
+                builder: (context) => const btmnav(),
               ));
         }
       },

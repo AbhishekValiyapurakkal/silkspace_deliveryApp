@@ -1,16 +1,20 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class elvbtn extends StatefulWidget {
-  const elvbtn({super.key, required this.txt, required this.ontap, required int height, required int width});
+class Elvbtn extends StatefulWidget {
+  const Elvbtn(
+      {super.key,
+      required this.txt,
+      required this.ontap,
+      required int height,
+      required int width});
   final String txt;
   final VoidCallback ontap;
 
   @override
-  State<elvbtn> createState() => _elvbtnState();
+  State<Elvbtn> createState() => _ElvbtnState();
 }
 
-class _elvbtnState extends State<elvbtn> {
+class _ElvbtnState extends State<Elvbtn> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -20,10 +24,10 @@ class _elvbtnState extends State<elvbtn> {
           height: 50,
           width: 200,
           decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [Colors.blue, Colors.green]),
-              //color: Colors.blue,
+              gradient:
+                  const LinearGradient(colors: [Colors.blue, Colors.green]),
               borderRadius: BorderRadius.circular(20),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   blurRadius: 20,
                   spreadRadius: 2,
@@ -33,8 +37,8 @@ class _elvbtnState extends State<elvbtn> {
               ]),
           child: Center(
               child: Text(
-            widget.txt!,
-            style: TextStyle(
+            widget.txt,
+            style: const TextStyle(
                 color: Colors.white,
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
