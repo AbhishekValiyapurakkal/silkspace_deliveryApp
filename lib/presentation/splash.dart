@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:silkspace_delivery/presentation/Homepage.dart';
+import 'package:silkspace_delivery/presentation/HomePage.dart';
 import 'package:silkspace_delivery/presentation/signuppage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     } else {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const Homepage()),
+        MaterialPageRoute(builder: (context) => const HomePage()),
       );
     }
   }
@@ -34,8 +34,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-    getloginstate();
-  });
+      getloginstate();
+    });
   }
 
   @override

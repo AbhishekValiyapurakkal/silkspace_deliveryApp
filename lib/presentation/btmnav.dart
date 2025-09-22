@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
-import 'package:silkspace_delivery/presentation/Homepage.dart';
+import 'package:silkspace_delivery/presentation/HomePage.dart';
 import 'package:silkspace_delivery/presentation/Youpage.dart';
 
-class btmnav extends StatefulWidget {
-  const btmnav({super.key});
+class Btmnav extends StatefulWidget {
+  const Btmnav({super.key});
 
   @override
-  State<btmnav> createState() => _btmnavState();
+  State<Btmnav> createState() => _BtmnavState();
 }
 
-class _btmnavState extends State<btmnav> {
+class _BtmnavState extends State<Btmnav> {
   int currentindex = 0;
 
-  List screens = [const Homepage(),const Youpage()];
+  List screens = [const HomePage(), const Youpage()];
 
   @override
   Widget build(BuildContext context) {

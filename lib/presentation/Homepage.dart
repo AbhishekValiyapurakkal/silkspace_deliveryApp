@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 List status = [
@@ -40,7 +40,7 @@ List status = [
   )
 ];
 
-class _HomepageState extends State<Homepage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -150,8 +150,8 @@ class _HomepageState extends State<Homepage> {
                                                                         snap.id)
                                                                     .delete();
                                                               },
-                                                              child:
-                                                                  const Text("ok")),
+                                                              child: const Text(
+                                                                  "ok")),
                                                           TextButton(
                                                               onPressed: () {
                                                                 Navigator.pop(
