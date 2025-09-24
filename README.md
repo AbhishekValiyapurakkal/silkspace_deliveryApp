@@ -1,16 +1,22 @@
-# silkspace_delivery
+# Silkspace – Delivery App
 
-A new Flutter project.
+Silkspace Delivery App is a Flutter-based mobile application for delivery partners in the Silkspace ecosystem. This app helps delivery personnel manage assigned orders and provide real-time updates to clients and admins.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Delivery Partner Authentication:** Secure login for delivery users.
+- **Order Assignment:** View and accept assigned delivery tasks.
+- **Order Tracking:** Update order status in real-time.
+- **Responsive Design:** Works on Android and iOS devices.
 
-A few resources to get you started if this is your first Flutter project:
+## Technologies Used
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter** – Cross-platform mobile development
+- **Firebase** – Authentication, Firestore, and Real-Time Database
+- **Http** – API requests
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+### Clone the repository
+```bash
+git clone https://github.com/AbhishekValiyapurakkal/silkspace_deliveryApp.git
